@@ -1,11 +1,11 @@
 
 (defwidget menu []
   (box :class "powerBackground" :orientation "h" :space-evenly false :halign "end" :spacing 10
-    (button :onclick "coproc alacritty" :class "poweroff" "" )
-    (button :onclick "coproc alacritty" :class "reboot" "" )
-    (button :onclick "coproc alacritty" :class "suspend" "" )
-    (button :onclick "coproc alacritty" :class "lockscreen" "" )
-    (button :onclick "coproc alacritty" :class "logout" "" )
+    (button :onclick "systemctl poweroff" :class "poweroff" "" )
+    (button :onclick "systemctl reboot" :class "reboot" "" )
+    (button :onclick "systemctl suspend" :class "suspend" "" )
+    (button :onclick "~/.config/bspwm/scripts/mylock.sh" :class "lockscreen" "" )
+    (button :onclick "loginctl terminate-session $XDG_SESSION_ID" :class "logout" "" )
 ))
 (defwidget menu_content []
   (box :orientation "h" :class "menuBackground"
