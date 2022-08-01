@@ -1,0 +1,76 @@
+// COLORS
+$BG: #1e2122;
+$BGD: #1a1d1e;
+$FG: #c7b89d;
+$BLACK: #2c2f30;
+$RED: #ec6b64;
+$GREEN: #89b482;
+$YELLOW: #d6b676;
+$BLUE: #6d8dad;
+$MAGENTA: #9385b4;
+$CYAN: #82b3a8;
+$WHITE: #c7b89d;
+$ORANGE: #e78a4e;
+$RAD: 6px;
+
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+}
+.powermenu{
+    border-radius: $RAD;
+    background-color: $YELLOW;
+    button{
+        background-color: $BGD;
+        padding: 0 18px;
+        border: 0 solid transparent;
+        border-radius: $RAD;
+        margin: 0;
+        font-size: 80px;
+        font-family: "feather";
+        color: $FG;
+    }
+    .poweroff{
+        color: $RED;
+        &:hover{
+            background-color: rgba($RED, 0.12);
+        }
+    }
+    .reboot{
+        color: $YELLOW;
+        &:hover{
+            background-color: rgba($color: $YELLOW, $alpha: 0.12);
+        }
+    }
+    .suspend{
+        color: $GREEN;
+        &:hover{
+            background-color: rgba($color: $GREEN, $alpha: 0.12);
+        }
+    }
+    .lockscreen{
+        color: $MAGENTA;
+        &:hover{
+            background-color: rgba($color: $MAGENTA, $alpha: 0.12);
+        }
+    }
+    .logout{
+        color: $ORANGE;
+        &:hover{
+            background-color: rgba($color: $ORANGE, $alpha: 0.12);
+        }
+    }
+}
+.powerBackground{
+    border: 3px solid $BGD;
+    background-color: $BG;
+    border-radius: $RAD;
+    padding: 10px;
+}
+
+
+.menuBackground{
+    border: 0 solid $BGD;
+    background-color: $BGD;
+    border-radius: $RAD;
+    background-color: $BGD;
+}

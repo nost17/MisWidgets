@@ -1,0 +1,21 @@
+
+(defwidget menu []
+  (box :class "powerBackground" :orientation "h" :space-evenly false :halign "end" :spacing 10
+    (button :onclick "coproc alacritty" :class "poweroff" "" )
+    (button :onclick "coproc alacritty" :class "reboot" "" )
+    (button :onclick "coproc alacritty" :class "suspend" "" )
+    (button :onclick "coproc alacritty" :class "lockscreen" "" )
+    (button :onclick "coproc alacritty" :class "logout" "" )
+))
+(defwidget menu_content []
+  (box :orientation "h" :class "menuBackground"
+    (menu)))
+(defwindow powermenu
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "15%"
+                      :width "600px"
+                      :height "140px"
+                      :anchor "top center")
+  (menu_content))
